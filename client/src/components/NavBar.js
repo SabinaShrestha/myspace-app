@@ -4,6 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { handleLogout } from '../reducers/user';
 
+
 class NavBar extends Component {
   rightNavs = () => {
     const { user, dispatch, history } = this.props;
@@ -36,6 +37,9 @@ class NavBar extends Component {
         <Menu pointing secondary>
           <Link to='/'>
             <Menu.Item name='home' />
+          </Link>
+          <Link to='/posts'>
+            <Menu.Item name='Posts' />
           </Link>
           { this.rightNavs() }
         </Menu>
